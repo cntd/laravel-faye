@@ -94,7 +94,7 @@ class Faye {
 		$response[ 'status' ] = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
 		curl_close($curl);
-		var_dump($response);
+
 		$status = json_decode($response[ 'body' ], true);
 		if(!empty($status[0]['successful'])){
 			return true;
