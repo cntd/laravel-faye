@@ -61,7 +61,7 @@ class Faye {
 			throw new Exception('Need set up connection before faye can send message');
 
 		if(!empty(\Config::get('faye.name', '')))
-			$channel = '/.'. \Config::get('faye.name', '') . $channel;
+			$channel = '/'. \Config::get('faye.name', '') . $channel;
 
 		$this->postJSON($this->server, json_encode([
 			'channel' => $channel,
