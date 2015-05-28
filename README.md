@@ -3,13 +3,13 @@
 
 ## Установка
 
-```shell
+```
   composer require kodeks/laravel-faye 
 ```
 
 Далее нужно добавить сервис провайдер в config/app.php
 
-```shell
+```
   'Kodeks\LaravelFaye\LaravelFayeServiceProvider',
 ```
 
@@ -17,5 +17,16 @@
 
 Необходимо установить коннект (например в global.php):
 
-```shell
+```
 Faye::connect(Config::get('faye.server'));
+```
+
+Дальше где угодно:
+
+```
+Faye::send('/test', 'Hi!');
+```
+
+> Третим параметром можно передать ext
+
+> Если нужно получить ошибки можно использовать метод Faye::getLastError()
