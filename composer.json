@@ -1,0 +1,20 @@
+{
+    "name": "kodeks/laravel-faye",
+    "description": "",
+    "authors": [
+        {
+            "name": "Alex_Sh",
+            "email": "alex_sh@kodeks.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Kodeks\\LaravelFaye": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
