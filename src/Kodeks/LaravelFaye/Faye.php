@@ -59,8 +59,8 @@ class Faye {
 	public function send($channel, $data = array(), $ext = array()){
 		if(empty($this->server))
 			throw new Exception('Need set up connection before faye can send message');
-
-		if(!empty(\Config::get('faye.name', '')))
+		$server = \Config::get('faye.name', '');
+		if(!empty($server))
 			$channel = '/'. \Config::get('faye.name', '') . $channel;
 
 		$this->postJSON($this->server, json_encode([
