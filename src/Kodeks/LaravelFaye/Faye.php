@@ -58,7 +58,7 @@ class Faye {
 	 */
 	public function send($channel, $data = array(), $ext = array()){
 		if(empty($this->server))
-			throw new Exception('Need set up connection before faye can send message');
+			throw new \Exception('Need set up connection before faye can send message');
 		$server = \Config::get('faye.name', '');
 		if(!empty($server))
 			$channel = '/'. \Config::get('faye.name', '') . $channel;
